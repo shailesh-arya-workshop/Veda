@@ -1,0 +1,13 @@
+/* AI Everything Workspace — animations (killed by body.no-anim or reduced motion) */
+@keyframes glowPulse{0%,100%{box-shadow:0 0 8px rgba(212,175,55,.25)}50%{box-shadow:0 0 22px rgba(212,175,55,.55)}}
+.btn.primary.glow{animation:glowPulse 2.4s infinite}
+.hero h1{animation:viewIn .7s ease}
+.quick-card,.feature-tile,.chip,.sb-item,.tab{transition:transform .18s,box-shadow .22s,border-color .18s,background .18s}
+.notif-dot.show{animation:pulse 1.2s infinite}
+.chat-bar:focus-within{border-color:var(--gold);box-shadow:0 0 14px rgba(212,175,55,.25)}
+.hero-input .hi-btn.send{animation:glowPulse 2.8s infinite}
+/* reduced motion / user toggle: kill ALL animations */
+body.no-anim *,body.no-anim *::before,body.no-anim *::after{animation:none!important;transition:none!important}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001s!important;transition-duration:.001s!important}
+}
