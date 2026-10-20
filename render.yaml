@@ -1,0 +1,14 @@
+# Render blueprint — free tier, Node runtime.
+# Note: free Node env me yt-dlp binary nahi hota, isliye /api/dl/* wahan 501
+# YTDLP_MISSING dega. Downloader chahiye to Docker deploy karo (Dockerfile included)
+# — Render par service type "Docker" chuno, ye yaml tab ignore hoga.
+services:
+  - type: web
+    name: ai-everything-workspace
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production

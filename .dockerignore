@@ -1,0 +1,7 @@
+# AI Everything Workspace — Docker build hygiene
+node_modules
+.git
+tests
+docs
+*.log
+/tmp
