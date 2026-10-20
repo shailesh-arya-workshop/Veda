@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AI Everything Workspace — By Shailesh Arya</title>
+<link rel="icon" type="image/svg+xml" href="logo.svg">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/views.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="app">
+  <!-- ============ TOP BAR ============ -->
+  <header class="topbar">
+    <button class="icon-btn" id="hamburger" aria-label="Menu">☰</button>
+    <div class="brand" id="brand-home" role="button" tabindex="0" aria-label="Home">
+      <img src="logo.svg" alt="AI Everything crown logo">
+      <div>
+        <div class="brand-name">AI <span class="gold-text">Everything</span></div>
+        <div class="brand-sub">WORKSPACE</div>
+      </div>
+      <span class="badge-premium">PREMIUM</span>
+    </div>
+    <div class="topbar-search">
+      <span class="sicon">🔍</span>
+      <input id="search-input" type="text" autocomplete="off"
+        aria-label="Search" data-i18n-input="searchPlaceholder">
+      <div id="search-dropdown" role="listbox"></div>
+    </div>
+    <div class="topbar-actions">
+      <button class="live-news-btn" id="btn-live-news"><span class="live-dot"></span><span class="lbl" data-i18n="liveNews">Live News</span></button>
+      <select class="lang-select" id="lang-select" aria-label="Language">
+        <option value="hi">हिंदी</option>
+        <option value="en">English</option>
+      </select>
+      <button class="icon-btn" id="btn-theme" aria-label="Theme" title="Theme">🌙</button>
+      <button class="icon-btn" id="btn-bell" aria-label="Notifications" title="Notifications">🔔<span class="notif-dot" id="notif-dot"></span></button>
+      <div class="profile-chip" id="profile-chip" role="button" tabindex="0">
+        <div class="avatar" id="profile-avatar">S</div>
+        <div>
+          <div class="nm" id="profile-name">Shailesh Arya</div>
+          <div class="pl">Pro Plan</div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ============ TOP TABS ============ -->
+  <nav class="tabs" id="top-tabs" aria-label="Main tabs"></nav>
+  <!-- ============ MAIN ============ -->
+  <div class="main">
+    <aside class="sidebar" id="sidebar" aria-label="Sidebar"></aside>
+    <main class="center" id="view-root" tabindex="-1"></main>
+    <aside class="rightpanel" id="rightpanel" aria-label="PDF panel"></aside>
+  </div>
+  <footer class="footer">AI Everything Workspace © 2026 &nbsp;•&nbsp; By Shailesh Arya Developer</footer>
+</div>
+<div id="toast-root" aria-live="polite"></div>
+<div id="notif-panel" role="dialog" aria-label="Notifications"></div>
+<div id="dialog-root"></div>
+
+<script src="js/app.js"></script>
+<script src="views/home.js"></script>
+<script src="views/chat.js"></script>
+<script src="views/news.js"></script>
+<script src="views/library.js"></script>
+<script src="views/memory.js"></script>
+<script src="views/history.js"></script>
+<script src="views/profile.js"></script>
+<script src="views/settings.js"></script>
+<!-- Tools agent scripts: register via App.registerView + App.events hooks -->
+<script src="js/tools/_shared.js"></script>
+<script src="js/tools/vpdf.js"></script>
+<script src="js/tools/pdf-studio.js"></script>
+<script src="js/tools/image-to-pdf.js"></script>
+<script src="js/tools/pdf-to-word.js"></script>
+<script src="js/tools/word-to-pdf.js"></script>
+<script src="js/tools/file-converter.js"></script>
+<script src="js/tools/image-studio.js"></script>
+<script src="js/tools/code-lab.js"></script>
+<script src="js/tools/downloader.js"></script>
+<script src="js/tools/ocr.js"></script>
+<script src="js/tools/generators.js"></script>
+<script src="js/tools/data-analysis.js"></script>
+<script src="js/tools/voice.js"></script>
+<script src="js/tools/video.js"></script>
+</body>
+</html>
